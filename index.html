@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claves Matematicas</title>
+  <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <div class="brand-mark">∑</div>
+        <h1>Claves Matematicas</h1>
+        <p class="lead">Descubri los patrones. Desbloquea los mundos.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <h2>Perfiles</h2>
+          <p>Hasta 6 jugadores, ordenados por XP de forma amigable.</p>
+        </div>
+      </div>
+      <div class="grid profiles-grid" data-profiles></div>
+    </section>
+
+    <section class="card" aria-label="Crear perfil">
+      <h2>Nuevo perfil</h2>
+      <form class="create-form" data-create-profile>
+        <input name="nombre" maxlength="20" autocomplete="off" placeholder="Nombre del jugador">
+        <button type="submit">Crear</button>
+      </form>
+      <p class="notice" data-notice></p>
+    </section>
+  </main>
+
+  <script src="js/xp.js"></script>
+  <script src="js/perfiles.js"></script>
+  <script src="js/pantallas.js"></script>
+  <script>
+    Pantallas.initInicio();
+  </script>
+</body>
+</html>

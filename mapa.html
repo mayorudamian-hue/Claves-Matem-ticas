@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mapa | Claves Matematicas</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/mapa.css">
+</head>
+<body>
+  <main class="page">
+    <header class="app-header">
+      <div>
+        <h1 data-player-name>Jugador</h1>
+        <p><span data-player-level></span> · <strong data-player-xp></strong></p>
+        <div class="progress" aria-label="Progreso al siguiente nivel"><span data-progress></span></div>
+        <p class="notice" data-next-level></p>
+      </div>
+      <button type="button" class="ghost" data-change-profile>Cambiar perfil</button>
+    </header>
+
+    <p class="notice" data-notice></p>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <h2>Mapa de mundos</h2>
+          <p>Cada mundo abre el siguiente al completar sus 3 minijuegos.</p>
+        </div>
+      </div>
+      <div class="world-map" data-world-map></div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <h2>Estadisticas</h2>
+          <p>Datos de exploracion del perfil activo.</p>
+        </div>
+      </div>
+      <div class="grid stats-grid" data-stats></div>
+    </section>
+  </main>
+
+  <script src="js/xp.js"></script>
+  <script src="js/perfiles.js"></script>
+  <script src="js/pantallas.js"></script>
+  <script>
+    Pantallas.initMapa();
+  </script>
+</body>
+</html>

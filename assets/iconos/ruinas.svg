@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ruinas">
+  <rect width="64" height="64" rx="10" fill="#2C1A0E"/>
+  <path d="M12 52h40M18 24h28M20 24v28M30 24v28M44 24v28M16 20l16-10 16 10" fill="none" stroke="#C8A96E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M23 42h5M36 34h5" stroke="#8B3A2A" stroke-width="4" stroke-linecap="round"/>
+</svg>

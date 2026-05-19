@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Senal espacial">
+  <rect width="64" height="64" rx="10" fill="#0A0A1A"/>
+  <path d="M32 8l7 16 17 2-13 11 4 17-15-9-15 9 4-17L8 26l17-2z" fill="none" stroke="#4A9EFF" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M21 18l5 5M45 13l-4 6M48 45l5 4" stroke="#7B5EA7" stroke-width="4" stroke-linecap="round"/>
+</svg>

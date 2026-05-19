@@ -1,0 +1,192 @@
+.game-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.game-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--world) 44%, rgba(255, 255, 255, 0.14));
+  background: linear-gradient(135deg, color-mix(in srgb, var(--world) 18%, transparent), rgba(15, 23, 42, 0.92));
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.game-header h1 {
+  font-size: clamp(1.9rem, 5vw, 3.5rem);
+  margin-bottom: 0.35rem;
+}
+
+.lives {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.24);
+}
+
+.vida.viva {
+  color: var(--world);
+  text-shadow: 0 0 14px color-mix(in srgb, var(--world) 70%, transparent);
+}
+
+.challenge-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.9rem;
+}
+
+.challenge-card,
+.machine-panel,
+.summary-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(23, 32, 51, 0.94);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.challenge-question {
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  font-size: clamp(1.45rem, 4vw, 2.6rem);
+  font-weight: 850;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.answer-row,
+.machine-controls,
+.summary-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.options button {
+  min-height: 58px;
+  background: color-mix(in srgb, var(--world) 28%, rgba(255, 255, 255, 0.08));
+  color: var(--text);
+  border: 1px solid color-mix(in srgb, var(--world) 38%, rgba(255, 255, 255, 0.16));
+  font-size: 1.05rem;
+}
+
+.hint {
+  margin-top: 0.75rem;
+}
+
+.feedback {
+  min-height: 3rem;
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--muted);
+}
+
+.feedback.correcto,
+.feedback.nivelSuperado {
+  border-color: rgba(57, 211, 83, 0.5);
+  background: rgba(57, 211, 83, 0.12);
+  color: #b7f7c3;
+}
+
+.feedback.incorrecto,
+.feedback.sinVidas {
+  border-color: rgba(239, 68, 68, 0.52);
+  background: rgba(239, 68, 68, 0.12);
+  color: #fecaca;
+}
+
+.feedback.pista {
+  border-color: rgba(244, 201, 93, 0.5);
+  background: rgba(244, 201, 93, 0.1);
+  color: #fde68a;
+}
+
+.machine-panel {
+  margin-bottom: 1rem;
+  border-color: color-mix(in srgb, var(--world) 42%, rgba(255, 255, 255, 0.14));
+}
+
+.machine-core {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 72px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--world);
+  font-weight: 900;
+  margin-bottom: 0.8rem;
+}
+
+.machine-log {
+  color: var(--muted);
+  margin-top: 0.7rem;
+}
+
+.summary-panel {
+  text-align: center;
+}
+
+.summary-panel h2 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+}
+
+.summary-grid {
+  width: min(520px, 100%);
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.6rem;
+  text-align: left;
+}
+
+.summary-grid span {
+  color: var(--muted);
+}
+
+.level-up {
+  margin: 1rem auto;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  background: rgba(244, 201, 93, 0.15);
+  border: 1px solid rgba(244, 201, 93, 0.45);
+  color: #fde68a;
+  font-weight: 900;
+}
+
+@media (max-width: 599px) {
+  .game-header,
+  .answer-row,
+  .machine-controls,
+  .summary-actions,
+  .options {
+    grid-template-columns: 1fr;
+  }
+
+  .challenge-question {
+    min-height: 4rem;
+  }
+
+  .lives {
+    justify-content: flex-start;
+  }
+}
