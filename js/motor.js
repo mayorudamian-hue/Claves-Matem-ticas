@@ -26,13 +26,13 @@
     },
     codigo: {
       titulo: "El Codigo de la Puerta",
-      instrucciones: "Deduce la regla que convierte entrada en salida.",
+      instrucciones: "Deduce la regla que abre la puerta. Usa x para el numero que entra, o escribe la operacion con palabras.",
       desafios: [
-        { nivel: 1, tipo: "regla", pregunta: "1 -> 5, 2 -> 6, 3 -> 7. Regla:", respuesta: ["+4", "sumar 4", "suma 4", "añadir 4", "agregar 4"], pista: "La salida es cuatro mas." },
-        { nivel: 1, tipo: "opciones", pregunta: "2 -> 6, 3 -> 9, 4 -> 12", respuesta: "multiplicar por 3", opciones: ["sumar 3", "multiplicar por 3", "restar 3", "multiplicar por 2"], pista: "La salida triplica la entrada." },
-        { nivel: 2, tipo: "regla", pregunta: "1 -> 5, 2 -> 7, 3 -> 9. Regla:", respuesta: ["x2+3", "por 2 mas 3", "multiplicar por 2 y sumar 3", "*2+3"], pista: "Primero duplica." },
+        { nivel: 1, tipo: "regla", pregunta: "Entra 1 y sale 5. Entra 2 y sale 6. Entra 3 y sale 7. ¿Cual es la formula?", respuesta: ["+4", "x+4", "x + 4", "sumar 4", "suma 4", "añadir 4", "agregar 4"], pista: "La salida es cuatro mas que el numero que entra." },
+        { nivel: 1, tipo: "opciones", pregunta: "Entra 2 y sale 6. Entra 3 y sale 9. Entra 4 y sale 12. ¿Que regla usa la puerta?", respuesta: "multiplicar por 3", opciones: ["sumar 3", "multiplicar por 3", "restar 3", "multiplicar por 2"], pista: "La salida triplica la entrada." },
+        { nivel: 2, tipo: "regla", pregunta: "Entra 1 y sale 5. Entra 2 y sale 7. Entra 3 y sale 9. ¿Cual es la formula?", respuesta: ["x2+3", "x*2+3", "2x+3", "2*x+3", "x x 2 + 3", "por 2 mas 3", "multiplicar por 2 y sumar 3", "*2+3"], pista: "Primero duplica el numero que entra; despues suma 3." },
         { nivel: 2, tipo: "input", pregunta: "Si la regla es x2 + 1, que sale con 8?", respuesta: "17", pista: "Duplica 8 y suma 1." },
-        { nivel: 3, tipo: "regla", pregunta: "2 -> 5, 4 -> 17, 6 -> 37. Regla:", respuesta: ["x^2+1", "cuadrado mas 1", "elevar al cuadrado y sumar 1", "x2+1"], pista: "Piensa en cuadrados." },
+        { nivel: 3, tipo: "regla", pregunta: "Entra 2 y sale 5. Entra 4 y sale 17. Entra 6 y sale 37. ¿Cual es la formula?", respuesta: ["x^2+1", "x²+1", "x*x+1", "cuadrado mas 1", "elevar al cuadrado y sumar 1", "x2+1"], pista: "Piensa en el cuadrado del numero que entra, y despues suma 1." },
         { nivel: 3, tipo: "input", pregunta: "Regla oculta: n al cuadrado menos n. Si entra 7, sale:", respuesta: "42", pista: "7 x 7 menos 7." }
       ]
     },
@@ -43,7 +43,7 @@
         { nivel: 1, tipo: "input", pregunta: "5, 10, 15, 20, __", respuesta: "25", pista: "Los pulsos suben de cinco en cinco." },
         { nivel: 1, tipo: "opciones", pregunta: "2, 6, 18, __", respuesta: "54", opciones: ["24", "36", "54", "72"], pista: "Cada pulso se triplica." },
         { nivel: 2, tipo: "input", pregunta: "Senal con ruido: 4, 8, 12, 19, 20. Que valor rompe el patron?", respuesta: "19", pista: "Deberia crecer de cuatro en cuatro." },
-        { nivel: 2, tipo: "opciones", pregunta: "1, 4, 7, 11, 13. Ruido:", respuesta: "11", opciones: ["4", "7", "11", "13"], pista: "Busca saltos de tres." },
+        { nivel: 2, tipo: "opciones", pregunta: "La señal deberia sumar 3 cada vez: 1, 4, 7, 11, 13. ¿Que pulso tiene ruido?", respuesta: "11", opciones: ["4", "7", "11", "13"], pista: "Despues de 7 deberia venir 10 para mantener +3." },
         { nivel: 3, tipo: "input", pregunta: "Dos senales alternadas: 2, 10, 4, 20, 6, 30, __", respuesta: "8", pista: "Mira las posiciones impares." },
         { nivel: 3, tipo: "opciones", pregunta: "3, 100, 6, 90, 12, 80, __", respuesta: "24", opciones: ["18", "21", "24", "70"], pista: "Una senal duplica; la otra baja 10." }
       ]
@@ -70,7 +70,7 @@
         { nivel: 2, tipo: "input", pregunta: "Regla: x2 + 1. Si entra 9, sale:", respuesta: "19", pista: "Duplica y suma uno." },
         { nivel: 2, tipo: "regla", pregunta: "1 -> 3, 2 -> 5, 3 -> 7. Regla:", respuesta: ["x2+1", "*2+1", "por 2 mas 1", "multiplicar por 2 y sumar 1"], pista: "Duplica y suma uno." },
         { nivel: 3, tipo: "input", pregunta: "Si par x2, si impar +5. Entra 7:", respuesta: "12", pista: "7 es impar." },
-        { nivel: 3, tipo: "regla", pregunta: "2 -> 4, 3 -> 8, 4 -> 8, 5 -> 10. Regla:", respuesta: ["si par x2 si impar +5", "par por 2 impar mas 5", "par *2 impar +5"], pista: "La regla cambia segun paridad." }
+        { nivel: 3, tipo: "regla", pregunta: "Entra 2 y sale 4. Entra 3 y sale 8. Entra 4 y sale 8. Entra 5 y sale 10. ¿Que regla usa la maquina?", respuesta: ["si par x2 si impar +5", "si es par x2 si es impar +5", "si es par multiplicar por 2 si es impar sumar 5", "si es par multiplica por 2 si es impar suma 5", "par por 2 impar mas 5", "par *2 impar +5", "pares x2 impares +5", "los pares se multiplican por 2 y los impares suman 5"], pista: "Los numeros pares se multiplican por 2. Los impares suman 5." }
       ]
     },
     maquina: {
@@ -253,6 +253,9 @@
     estado.nivelInterno = desafio.nivel;
     const area = document.querySelector("[data-juego]");
     if (!area) return;
+    const ayudaRegla = desafio.tipo === "regla"
+      ? `<p class="rule-help">Podes escribir la regla con <strong>x</strong> como numero que entra, por ejemplo <strong>x+4</strong> o <strong>x*2+3</strong>. Si cambia segun el caso, escribi algo como <strong>si es par x2, si es impar +5</strong>. Tambien vale escribirlo con palabras.</p>`
+      : "";
     const opciones = desafio.tipo === "opciones"
       ? `<div class="options">${desafio.opciones.map((opcion) => `<button type="button" data-option="${opcion}">${opcion}</button>`).join("")}</div>`
       : `<div class="answer-row"><input data-respuesta type="text" inputmode="${desafio.tipo === "input" ? "numeric" : "text"}" maxlength="80" placeholder="${desafio.tipo === "regla" ? "Escribi la regla" : "Tu respuesta"}"><button type="button" data-check>Verificar</button></div>`;
@@ -265,6 +268,7 @@
       ${renderMaquina(banco[estado.config.minijuego].maquina)}
       <div class="challenge-card">
         <p class="challenge-question">${desafio.pregunta}</p>
+        ${ayudaRegla}
         ${opciones}
         <button type="button" class="ghost hint" data-hint>Ver pista</button>
       </div>
@@ -275,6 +279,14 @@
   }
 
   function conectarEventos() {
+    const salir = document.querySelector("[data-exit-game]");
+    if (salir) {
+      salir.addEventListener("click", () => {
+        if (confirm("¿Seguro que quieres salir? Se perdera el avance de esta partida.")) {
+          window.location.href = estado.config.mundoHome;
+        }
+      });
+    }
     document.querySelectorAll("[data-option]").forEach((boton) => {
       boton.addEventListener("click", () => registrarRespuesta(esCorrecta(boton.dataset.option, desafioActual().respuesta)));
     });
@@ -396,7 +408,7 @@
     estado.terminado = false;
 
     const juego = banco[config.minijuego];
-    document.querySelector("[data-game-title]").textContent = juego.titulo;
+    document.querySelector("[data-game-title]").innerHTML = `<span class="game-title-icon"><img src="../../assets/iconos/${config.minijuego}.svg" alt="" width="50" height="50"></span><span>${juego.titulo}</span>`;
     document.querySelector("[data-game-subtitle]").textContent = juego.instrucciones;
     renderDesafio();
   }

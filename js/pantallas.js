@@ -15,6 +15,11 @@
     return `<img src="${prefijo}assets/iconos/${mundoId}.svg" alt="" width="34" height="34">`;
   }
 
+  function iconoMinijuego(minijuegoId, profundidad) {
+    const prefijo = profundidad ? "../".repeat(profundidad) : "";
+    return `<img src="${prefijo}assets/iconos/${minijuegoId}.svg" alt="" width="46" height="46">`;
+  }
+
   function contarMundosDesbloqueados(perfil) {
     return Object.values(perfil.mundos).filter((mundo) => mundo.desbloqueado).length;
   }
@@ -173,7 +178,10 @@
       return `
         <article class="card mini-card">
           <div>
-            <span class="badge">${mini.tipo}</span>
+            <div class="mini-heading">
+              <div class="mini-icon">${iconoMinijuego(mini.id, profundidad)}</div>
+              <span class="badge">${mini.tipo}</span>
+            </div>
             <h3>${mini.nombre}</h3>
             <p>${mini.descripcion}</p>
           </div>
@@ -186,5 +194,5 @@
     }).join("");
   }
 
-  window.Pantallas = { initInicio, initMapa, initMundo, icono, iconoMundo };
+  window.Pantallas = { initInicio, initMapa, initMundo, icono, iconoMundo, iconoMinijuego };
 })();
